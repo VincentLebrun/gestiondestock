@@ -20,7 +20,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                 PasswordEncoderFactories.createDelegatingPasswordEncoder();
         auth
                 .inMemoryAuthentication()
-                .withUser("user")
+                .withUser("users")
                 .password(encoder.encode("1234"))
                 .roles("USER")
                 .and()
@@ -31,7 +31,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //
+
         http
                 .authorizeRequests()
                 .anyRequest()
