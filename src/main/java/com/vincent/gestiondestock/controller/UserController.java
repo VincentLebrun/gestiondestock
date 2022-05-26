@@ -1,6 +1,7 @@
 package com.vincent.gestiondestock.controller;
 
-import com.vincent.gestiondestock.model.User;
+
+import com.vincent.gestiondestock.model.Users;
 import com.vincent.gestiondestock.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/")
-    List<User> findUser() {
+    List<Users> findUser() {
         return userService.getAllUser();
     }
 }

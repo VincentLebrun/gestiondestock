@@ -10,10 +10,10 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-public class User {
+public class Users {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
-    @SequenceGenerator(name = "user_seq", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq")
+    @SequenceGenerator(name = "users_seq", initialValue = 1000, allocationSize = 1)
     Long id;
     String name;
     String title;
