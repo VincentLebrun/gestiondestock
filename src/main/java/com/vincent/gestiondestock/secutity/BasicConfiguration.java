@@ -37,6 +37,7 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic();
+                .cors();
     }
+
 }
