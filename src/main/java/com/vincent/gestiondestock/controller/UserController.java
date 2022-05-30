@@ -13,12 +13,18 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 //Naming convention users in Rest
-@RequestMapping("/user")
+
 public class UserController {
     private final UserService userService;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     List<User> findUser() {
         return userService.getAllUser();
     }
+
+    @GetMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
+
 }
