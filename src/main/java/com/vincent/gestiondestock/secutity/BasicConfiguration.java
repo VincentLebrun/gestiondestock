@@ -1,4 +1,4 @@
-package com.vincent.gestiondestock.secutity;
+/**package com.vincent.gestiondestock.secutity;
 
 //import tool for security
 
@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @Configuration
 @EnableWebSecurity
@@ -39,5 +40,9 @@ public class BasicConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .cors();
     }
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/*").allowedMethods("");
+    }
 
-}
+}**/
